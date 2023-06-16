@@ -1,11 +1,11 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * main - entry point
+ * main - Enrty point
  *
  * description: ture  or fasle
  *
- * Return : 0 (Sucess)
+ * Return: 0 (Sucess)
 */
 
 int main(void)
