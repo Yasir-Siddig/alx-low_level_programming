@@ -1,10 +1,13 @@
-
 #include "main.h"
-	/**
-	 * main - print _putchar
-	 * is written by mbah
-	 * Return: 0
-	 */
+#include<stdio.h>
+/**
+* main - Entry point
+*
+* Description: 'the program's description'
+*
+* Return: 0
+*
+*/
 
 
 	int main(void)
