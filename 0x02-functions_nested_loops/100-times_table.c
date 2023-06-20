@@ -1,35 +1,48 @@
-#include <stdio.h>
 #include "main.h"
+
 /**
-* main - finds and prints the sum of the even-valued terms
-* followed by a new line
-* Return: Always 0 (Success)
+* print_times_table - prints the n times table, starting with 0
+* @n: number of the times table
 */
-	int main(void)
+	void print_times_table(int n)
 	{
-		int i;
-		unsigned long int j, k, next, sum;
+		int i, j, k;
 
 
-		j = 1;
-		k = 2;
-		sum = 0;
-
-
-		for (i = 1; i <= 33; ++i)
+		if (n >= 0 && n <= 15)
 		{
-			if (j < 4000000 && (j % 2) == 0)
+			for (i = 0; i <= n; i++)
 			{
-				sum = sum + j;
+				for (j = 0; j <= n; j++)
+				{
+					k = j * i;
+					if (j == 0)
+					{
+						_putchar(k + '0');
+					} else if (k < 10 && j != 0)
+					{
+						_putchar(',');
+						_putchar(' ');
+						_putchar(' ');
+						_putchar(' ');
+						_putchar(k + '0');
+					} else if (k >= 10 && k < 100)
+					{
+						_putchar(',');
+						_putchar(' ');
+						_putchar(' ');
+						_putchar((k / 10) + '0');
+						_putchar((k % 10) + '0');
+					} else if (k >= 100)
+					{
+						_putchar(',');
+						_putchar(' ');
+						_putchar((k / 100) + '0');
+						_putchar(((k / 10) % 10) + '0');
+						_putchar((k % 10) + '0');
+					}
+				}
+				_putchar('\n');
 			}
-			next = j + k;
-			j = k;
-			k = next;
 		}
-
-
-		printf("%lu\n", sum);
-
-
-		return (0);
 	}
