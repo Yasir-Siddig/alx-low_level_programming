@@ -1,11 +1,9 @@
 #include <stdio.h>
-/**
- * main - only one statement
- *
- * Return: Always 0 (Success)
- */
+
 	int main(void)
+
 {
+
 	int n;
 	int a[5];
 	int *p;
